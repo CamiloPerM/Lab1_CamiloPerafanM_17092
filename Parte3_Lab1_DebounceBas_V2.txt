@@ -128,6 +128,7 @@ void main(void) {
                        PORTEbits.RE0 = 1; //Encienda la LED en el pin E0, indicando que J1 es el ganador
                        PORTC = 0; //Se limpia PORTC
                        PORTCbits.RC0 = 1; // Se enciende el ultimo LED del conteo de J1
+                       PORTD = seg[1]; //Muestra en el display que el jugador 1 ganó
                        __delay_ms(3000); // Se esperan 3 segundos
                        return; // Se reinicia automaticamente el juego
 
@@ -152,6 +153,7 @@ void main(void) {
                        PORTEbits.RE1 = 1; //Encienda la LED en el pin E1, indicando que J2 es el ganador
                        PORTB = 0; //Se limpia PORTB
                        PORTBbits.RB0 = 1; //Se enciende el ultimo LED del conteo de J2
+                       PORTD = seg[2]; //Muestra en el display que el jugador 2 ganó
                        __delay_ms(3000); //Se esperan 3 segundos
                        return; //Se reinicia automaticamente el juego
                        
